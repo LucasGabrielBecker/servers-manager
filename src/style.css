@@ -1,0 +1,98 @@
+:root{
+  --icon-color: #2E4277;
+}
+
+body{
+  background-color: #e5e5e5;
+}
+
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  background-color: #e5e5e5;
+
+  position: relative;
+
+}
+
+#mymotiondiv{
+  width: 20px;
+  height: 20px;
+  background-color: lawngreen;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 99.9%;
+  height: 10vh;
+  background-color: #FFF;
+  padding: 0 10vw;
+  box-shadow: 0px 10px 20px rgba(0,0,0,.07);
+  display: flex;
+  align-items: center;
+  z-index: 10;
+}
+
+header span{
+  font-size: 18px;
+}
+
+main{
+  position: absolute;
+  top: 12vh;
+  height: 100%;
+}
+main h2{
+  margin-bottom: 20px;
+  color: #393b3d;
+  font-size: 26px;
+}
+
+.icons{
+    fill:var(--icon-color);
+    color: var(--icon-color);
+}
+
+.server{
+  width: 80vw;
+  height: 86px;
+  background-color: #FFF;
+  border-radius: 15px;
+  border: 1px solid #DDDDDD;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+.server:hover{
+  background-color: rgb(241, 241, 241);
+}
+
+.server .column{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+}
+.server .column span{
+  margin-left: 10px;
+}
+
+.inserver{
+  display: flex;
+  align-items: center;
+}
+
+.inserver span{
+  margin-left: 10px;
+}
