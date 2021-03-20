@@ -1,20 +1,29 @@
 pipeline {
-    agent any
+    agent {
+        docker{
+            image "node:14-alpine"
+            args "-p 3000:3000"
+        }
+    }
 
     stages {
-        stage('Build') {
+        stage('Install dependencies') {
             steps {
-                echo 'Building..'
+                echo 'Installing'
+                sh 'npm install'
             }
         }
-        stage('Test') {
+        stage('Building') {
             steps {
-                echo 'Testing..'
+                echo 'Building....'
+                sh 'npm build'
+                echo 'Building docker image'
+                sh 'docker build -t . servers-manager'
             }
         }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
+        stage('Deploy'){
+            steps{
+                sh 'docker run --name servers-manager -d -p 3000:3000 servers-manager'
             }
         }
     }

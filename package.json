@@ -10,6 +10,7 @@
     "framer-motion": "^3.10.2",
     "milligram": "^1.4.1",
     "react": "^17.0.1",
+    "react-accessible-accordion": "^3.3.4",
     "react-dom": "^17.0.1",
     "react-icons": "^4.2.0",
     "react-scripts": "4.0.3",
